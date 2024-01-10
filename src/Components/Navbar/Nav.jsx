@@ -16,8 +16,8 @@ function Nav({ loginClicked, signupClicked }) {
     <div className=" fixed h-20 md:h-24 ">
       <div className=" bg-gray-400 nav__bar w-full h-20 fixed flex flex-row items-center justify-between p-6">
         <div className=" text-3xl font-semibold">
-          <span className=" text-blue-600 text-5xl font-semibold">E</span>
-          duMentor
+          <span className=" text-blue-600 text-5xl font-semibold">Nanoquest</span>
+          
         </div>
 
         <div className="flex flex-row items-center justify-end md:w-8/12">

@@ -29,9 +29,9 @@ function Footer() {
 
         <div className=" flex flex-col w-10/12 md:flex-row gap-4 mt-4">
           <div className=" md:w-1/3  h-32 text-center md:text-left">
-            <h1 className=" text-xl font-semibold">Team EduMentor</h1>
+            <h1 className=" text-xl font-semibold">Team Nanoquest</h1>
             <span>
-              EduMentor,now we have branches all over India.
+              Nanoquest,now we have branches all over India.
               We are providing quality education to all.
             </span>
           </div>

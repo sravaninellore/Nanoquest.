@@ -11,7 +11,7 @@ function Welcome() {
           <h1 className=" font-semibold text-5xl">
             Welcome To{" "}
             <span className=" text-6xl font-extrabold text-blue-600">
-              EdMentor
+              Nanoquest
             </span>
           </h1>{" "}
           <br />
@@ -34,10 +34,10 @@ function Welcome() {
             here
           </div>
           <span className=" text-md md:text-xl ">
-            "Welcome to EdMentor, your gateway to transformative learning!
+            "Welcome to Nanoquest, your gateway to transformative learning!
             Unlock boundless knowledge, explore diverse courses, and embark on
             an enriching educational journey tailored just for you. Let's
-            empower your aspirations together at EdMentor, where learning knows
+            empower your aspirations together at Nanoquest, where learning knows
             no limits
           </span>
           <br />
