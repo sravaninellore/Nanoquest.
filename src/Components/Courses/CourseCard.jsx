@@ -23,10 +23,6 @@ function CourseCard({ data, img, CourseTitle }) {
                 <span> {item.point3}.</span>
                 <span className=" md:text-lg font-semibold cursor-pointer">
                   {" "}
-                  Tution Fees: {item.Price}{" "}
-                </span>
-                <span className=" md:text-lg font-semibold cursor-pointer">
-                  {" "}
                   Time Duration :{item.Duration}{" "}
                 </span>
               </div>
