@@ -24,7 +24,7 @@ function LoginPage({ loginClicked }) {
               <label>Username</label>
               <input
                 type="text"
-                className="px-4 ml-4  w-44  md:w-60"
+                className="px-4 ml-4  w-44  md:w-60 text-black"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
@@ -34,7 +34,7 @@ function LoginPage({ loginClicked }) {
               <label>Password</label>
               <input
                 type="password"
-                className="px-4 ml-5 w-44  md:w-60"
+                className="px-4 ml-5 w-44  md:w-60 text-black"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />

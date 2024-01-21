@@ -28,7 +28,7 @@ function CourseNavbar() {
                 className="mr-5 md:mr-14 hover:border-b-2 border-black focus:outline-none"
                 onClick={toggleDropdown}
               >
-                Finance
+                FINANCE
               </button>
             </span>
             {isOpen && (

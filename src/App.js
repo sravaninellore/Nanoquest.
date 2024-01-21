@@ -24,9 +24,16 @@ import ScrollFunctionality from "./Components/ScrollFunctionality.js";
 import LoginPage from "./Components/LoginPage.jsx";
 import SignUp from "./Components/SignUp.jsx";
 
+import { useAppContext } from "./Components/AppContext.js";
+import SearchResult from "./Components/Courses/SearchedCourses.jsx";
+
 function App() {
   const [login, setLogin] = useState(false);
   const [signup, setSignup] = useState(false);
+
+  const { searchTerm } = useAppContext();
+
+  console.log("value accessed in the App.js ", searchTerm);
 
   const handleLogin = () => {
     setLogin(!login);
@@ -49,80 +56,88 @@ function App() {
           <SignUp signupClicked={handleSignUp} />
         </span>
 
-        <>
-          <ScrollFunctionality />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<AboutSection />} />
+        {searchTerm ? (
+          <SearchResult />
+        ) : (
+          <>
+            <ScrollFunctionality />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="about" element={<AboutSection />} />
 
-            <Route path="course" element={<CoursePage />}>
-              <Route
-                path=""
-                element={
-                  <CourseCard
-                    CourseTitle={"Courses for School Students"}
-                    img={schoolImg}
-                    data={School}
-                  />
-                }
-              />
-              <Route
-                path="skills"
-                element={
-                  <CourseCard
-                    CourseTitle={"Enroll Various Skill Learning Activities"}
-                    img={skillsImg}
-                    data={Skills}
-                  />
-                }
-              />
-              <Route
-                path="graduation"
-                element={
-                  <CourseCard
-                    CourseTitle={"Explore Courses for College Students"}
-                    img={graduationImg}
-                    data={Graduation}
-                  />
-                }
-              />
-              <Route
-                path="finance"
-                element={
-                  <CourseCard
-                    CourseTitle={"Learn Finance"}
-                    img={graduationImg}
-                    data={Finance}
-                  />
-                }
-              />
-              <Route
-                path="moneymanagement"
-                element={
-                  <CourseCard
-                    CourseTitle={"Learn Money Management"}
-                    img={money}
-                    data={MoneyManagement}
-                  />
-                }
-              />
-              <Route
-                path="stockmarket"
-                element={
-                  <CourseCard
-                    CourseTitle={"Stock Market and Analysis"}
-                    img={stock}
-                    data={StockMarket}
-                  />
-                }
-              />
-            </Route>
-          </Routes>
-        </>
+              <Route path="course" element={<CoursePage />}>
+                <Route
+                  path=""
+                  element={
+                    <CourseCard
+                      courseClicked={handleSignUp}
+                      CourseTitle={"Courses for School Students"}
+                      img={schoolImg}
+                      data={School}
+                    />
+                  }
+                />
+                <Route
+                  path="skills"
+                  element={
+                    <CourseCard
+                      courseClicked={handleSignUp}
+                      CourseTitle={"Enroll Various Skill Learning Activities"}
+                      img={skillsImg}
+                      data={Skills}
+                    />
+                  }
+                />
+                <Route
+                  path="graduation"
+                  element={
+                    <CourseCard
+                      courseClicked={handleSignUp}
+                      CourseTitle={"Explore Courses for College Students"}
+                      img={graduationImg}
+                      data={Graduation}
+                    />
+                  }
+                />
+                <Route
+                  path="finance"
+                  element={
+                    <CourseCard
+                      courseClicked={handleSignUp}
+                      CourseTitle={"Learn Finance"}
+                      img={graduationImg}
+                      data={Finance}
+                    />
+                  }
+                />
+                <Route
+                  path="moneymanagement"
+                  element={
+                    <CourseCard
+                      courseClicked={handleSignUp}
+                      CourseTitle={"Learn Money Management"}
+                      img={money}
+                      data={MoneyManagement}
+                    />
+                  }
+                />
+                <Route
+                  path="stockmarket"
+                  element={
+                    <CourseCard
+                      courseClicked={handleSignUp}
+                      CourseTitle={"Stock Market and Analysis"}
+                      img={stock}
+                      data={StockMarket}
+                    />
+                  }
+                />
+              </Route>
+            </Routes>
+          </>
+        )}
 
         <Footer />
-
-        {/* <LoginPage/> */}
       </div>
     </Router>
   );
